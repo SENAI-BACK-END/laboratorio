@@ -22,4 +22,37 @@ public class Equipamento {
 
     @Column(name="descricao")
     private String descricao;
+
+    public Equipamento() {
+    }
+
+    public Equipamento(Integer id, String nome, String descricao) {
+        Id = id;
+        this.nome = nome;
+        this.descricao = descricao;
+    }
+
+    public Integer getId() {
+        return Id;
+    }
+
+    public void setId(Integer id) {
+        Id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
 }
