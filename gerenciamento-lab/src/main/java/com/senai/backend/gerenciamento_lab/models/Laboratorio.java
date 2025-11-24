@@ -34,4 +34,46 @@ public class Laboratorio {
         inverseJoinColumns=@JoinColumn(name="id_equipamento", referencedColumnName="id")
     )
     private List<Equipamento> equipamento;
+
+    public Laboratorio() {
+    }
+
+    public Laboratorio(Integer Id, List<Equipamento> equipamento, String localizacao, String nome) {
+        this.Id = Id;
+        this.equipamento = equipamento;
+        this.localizacao = localizacao;
+        this.nome = nome;
+    }
+
+    public Integer getId() {
+        return Id;
+    }
+
+    public void setId(Integer id) {
+        Id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getLocalizacao() {
+        return localizacao;
+    }
+
+    public void setLocalizacao(String localizacao) {
+        this.localizacao = localizacao;
+    }
+
+    public List<Equipamento> getEquipamento() {
+        return equipamento;
+    }
+
+    public void setEquipamento(List<Equipamento> equipamento) {
+        this.equipamento = equipamento;
+    }
 }
