@@ -27,7 +27,7 @@ public class EquipamentoController {
     @PostMapping("/cadastrar")
     public Equipamento cadastrar (@RequestBody Equipamento equipamento) {
         return equipamentoService.cadastrar(equipamento);
-}
+    }
 
     @GetMapping("/recuperar-po-id/{id}")
     public Equipamento recuperarPorId(@PathVariable Integer id) {
@@ -50,4 +50,10 @@ public class EquipamentoController {
         }
         return "Falha ao remover o Equipamento";
     }
+
+    @GetMapping("/contar")
+    public Long contar(){
+        return equipamentoService.contar();
+    }
+
 }

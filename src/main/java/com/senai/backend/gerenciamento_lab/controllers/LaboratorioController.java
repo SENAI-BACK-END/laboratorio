@@ -48,4 +48,9 @@ public class LaboratorioController {
         }
         return "Falha ao remover o Laboratorio";
     }
+
+     @GetMapping("/contar")
+    public Long contar(){
+        return laboratorioService.contar();
+    }
 }

@@ -46,4 +46,9 @@ public class LaboratorioService {
         }
         return false;
     }   
+
+    public Long contar() {
+        return laboratorioRepository.count();
+    }
+
 }

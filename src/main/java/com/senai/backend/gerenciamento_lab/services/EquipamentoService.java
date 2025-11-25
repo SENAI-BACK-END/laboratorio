@@ -46,5 +46,9 @@ public class EquipamentoService {
             return true;
         }
         return false;
-    }   
+    }  
+    
+    public Long contar() {
+        return EquipamentoRepository.count();
+    }
 }
