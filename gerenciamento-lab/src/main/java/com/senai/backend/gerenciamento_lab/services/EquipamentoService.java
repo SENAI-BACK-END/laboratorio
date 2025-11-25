@@ -16,8 +16,8 @@ public class EquipamentoService {
     @Autowired
     private EquipamentoRepository EquipamentoRepository;
     
-    public Equipamento cadastrar(Equipamento equipmaneto) {
-        return EquipamentoRepository.save(equipmaneto);
+    public Equipamento cadastrar(Equipamento equipamento) {
+        return EquipamentoRepository.save(equipamento);
 
     }
 
@@ -30,11 +30,11 @@ public class EquipamentoService {
         return EquipamentoRepository.findAll();
     }
 
-    public Equipamento atualizar(Integer id, Equipamento equipmaneto) {
+    public Equipamento atualizar(Integer id, Equipamento equipamento) {
         Equipamento merc = EquipamentoRepository.findById(id).get();
         if(merc != null) {
-            equipmaneto.setId(merc.getId());
-            return EquipamentoRepository.save(equipmaneto);
+            equipamento.setId(merc.getId());
+            return EquipamentoRepository.save(equipamento);
         }
         return null;
     }
